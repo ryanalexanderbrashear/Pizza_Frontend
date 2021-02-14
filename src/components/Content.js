@@ -1,11 +1,14 @@
+import Card from './Card';
+
 function Content() {
-  const styles = {
-    contentStyles: {
-      flex: '1 0 auto'
-    }
-  };
   return (
-    <div style={styles.contentStyles}>
+    <div className='container'>
+      <div className='row'>
+        <Card title={'Test'}>
+        </Card>
+        <Card title={'Test'}>
+        </Card>
+      </div>
     </div>
   );
 }
