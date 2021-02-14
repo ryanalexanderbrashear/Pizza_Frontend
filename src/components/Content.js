@@ -1,11 +1,12 @@
+import React from 'react';
 import Card from './Card';
+import PeopleListCard from './PeopleListCard';
 
 function Content() {
   return (
     <div className='container'>
       <div className='row'>
-        <Card title={'Test'}>
-        </Card>
+        <PeopleListCard />
         <Card title={'Test'}>
         </Card>
       </div>
