@@ -83,3 +83,17 @@ export const retrieveConsumption = async () => {
     return [];
   }
 }
+
+export const retrieveConsumptionStreaks = async () => {
+  try {
+    const response = await axios.get(`http://localhost:9292/api/v1/consumptionStreaks`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
