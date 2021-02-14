@@ -16,10 +16,17 @@ function PeopleListCard() {
   }
 
   return (
-    <Card title={'People'}>
-      <CardList list={people} />
-      <CardButton title={'Retrieve People'} onClick={retrievePeopleList} />
-      <CardButton title={'Clear'} onClick={() => setPeople([])} />
+    <Card>
+      <div className='card-body'>
+        <h5 className='card-title'>{'People'}</h5>
+        <CardList list={people} />
+      </div>
+      <div class="card-footer">
+        <div class="d-grid gap-2">
+          <CardButton title={'Retrieve People'} onClick={retrievePeopleList} />
+          <CardButton title={'Clear'} onClick={() => setPeople([])} />
+        </div>
+      </div>
     </Card>
   );
 }

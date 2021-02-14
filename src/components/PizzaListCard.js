@@ -16,10 +16,17 @@ function PizzaListCard() {
   }
 
   return (
-    <Card title={'Pizza'}>
-      <CardList list={pizza} />
-      <CardButton title={'Retrieve Pizza'} onClick={retrievePizzaList} />
-      <CardButton title={'Clear'} onClick={() => setPizza([])} />
+    <Card>
+      <div className='card-body'>
+        <h5 className='card-title'>{'Pizza'}</h5>
+        <CardList list={pizza} />
+      </div>
+      <div class="card-footer">
+        <div class="d-grid gap-2">
+          <CardButton title={'Retrieve Pizza'} onClick={retrievePizzaList} />
+          <CardButton title={'Clear'} onClick={() => setPizza([])} />
+        </div>
+      </div>
     </Card>
   );
 }

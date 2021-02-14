@@ -5,10 +5,14 @@ import PizzaListCard from './PizzaListCard';
 
 function Content() {
   return (
-    <div className='container'>
-      <div className='row'>
-        <PeopleListCard />
-        <PizzaListCard />
+    <div className='container h-100'>
+      <div className='row h-50'>
+        <div className='col'>
+          <PeopleListCard />
+        </div>
+        <div className='col'>
+          <PizzaListCard />
+        </div>
       </div>
     </div>
   );
