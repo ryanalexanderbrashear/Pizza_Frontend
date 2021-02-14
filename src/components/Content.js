@@ -1,14 +1,14 @@
 import React from 'react';
 import Card from './Card';
 import PeopleListCard from './PeopleListCard';
+import PizzaListCard from './PizzaListCard';
 
 function Content() {
   return (
     <div className='container'>
       <div className='row'>
         <PeopleListCard />
-        <Card title={'Test'}>
-        </Card>
+        <PizzaListCard />
       </div>
     </div>
   );
