@@ -16,7 +16,7 @@ export const retrievePeople = async () => {
   }
 }
 
-export const retrievePizza = async () => {
+export const retrievePizzas = async () => {
   try {
     const response = await axios.get('http://localhost:9292/api/v1/pizza');
     if (response.status === 200 && response.data !== null) {
@@ -29,5 +29,20 @@ export const retrievePizza = async () => {
   } catch (error) {
     console.log(error);
     return [];
+  }
+}
+
+export const createPizza = async (meatType) => {
+  try {
+    const response = await axios.post(`http://localhost:9292/api/v1/pizza?meat_type=${meatType}`);
+    console.log(response.status);
+    if (response.status === 201) {
+      return true;
+    } else {
+      return false;
+    }
+  } catch (error) {
+    console.log(error);
+    return false;
   }
 }

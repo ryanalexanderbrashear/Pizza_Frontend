@@ -21,8 +21,8 @@ function PeopleListCard() {
         <h5 className='card-title'>{'People'}</h5>
         <CardList list={people} />
       </div>
-      <div class="card-footer">
-        <div class="d-grid gap-2">
+      <div className="card-footer">
+        <div className="d-grid gap-2">
           <CardButton title={'Retrieve People'} onClick={retrievePeopleList} />
           <CardButton title={'Clear'} onClick={() => setPeople([])} />
         </div>
