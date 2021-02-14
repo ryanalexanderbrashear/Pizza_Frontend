@@ -21,8 +21,8 @@ function ConsumptionListCard() {
     <Card>
       <div className='card-body'>
         <h5 className='card-title'>{'Pizza Consumption'}</h5>
+        <ConsumptionTable list={consumptionRecords} />
       </div>
-      <ConsumptionTable list={consumptionRecords} />
       <CardButtonContainer>
         <CardButton title={'Retrieve Consumption Records'} onClick={retrieveRecords} />
         <CardButton title={'Clear'} onClick={() => setConsumptionRecords([])} />

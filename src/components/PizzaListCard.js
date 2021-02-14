@@ -48,7 +48,7 @@ function PizzaListCard() {
   return (
     <Card>
       <div className='card-body'>
-        <h5 className='card-title'>{'Pizza'}</h5>
+        <h5 className='card-title'>{'Pizza Types'}</h5>
         <PizzaList list={pizza} updateFunction={updatePizzaInfo} deleteFunction={deletePizzaByID} />
       </div>
       <CardButtonContainer>
