@@ -21,7 +21,7 @@ function MonthlyRecordCard() {
     <Card>
       <div className='card-body'>
         <h5 className='card-title'>{'Monthly Records'}</h5>
-        <MonthlyRecordTable list={records} />
+        <MonthlyRecordTable monthlyRecords={records} />
       </div>
       <CardButtonContainer>
         <CardButton title={'Retrieve Monthly Records'} onClick={getRecords} />

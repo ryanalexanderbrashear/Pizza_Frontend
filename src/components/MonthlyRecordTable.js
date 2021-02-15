@@ -16,7 +16,7 @@ function MonthlyRecordTable(props) {
         </tr>
       </thead>
       <tbody>
-        {props.list.map((record, index) => {
+        {props.monthlyRecords.map((record, index) => {
           if (!record) return null
           return (
             <tr key={index}>

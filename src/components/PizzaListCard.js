@@ -49,7 +49,7 @@ function PizzaListCard() {
     <Card>
       <div className='card-body'>
         <h5 className='card-title'>{'Pizza Types'}</h5>
-        <PizzaList list={pizza} updateFunction={updatePizzaInfo} deleteFunction={deletePizzaByID} />
+        <PizzaList pizzas={pizza} updateFunction={updatePizzaInfo} deleteFunction={deletePizzaByID} />
       </div>
       <CardButtonContainer>
         <CardButton title={'Retrieve Pizza'} onClick={retrievePizzaList} />

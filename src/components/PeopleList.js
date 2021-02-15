@@ -3,10 +3,10 @@ import React from 'react';
 function PeopleList(props) {
   return (
     <ul className='list-group list-group-flush'>
-      {props.list.map((listItem) => {
+      {props.people.map((person) => {
         return (
-          <li className='list-group-item' key={listItem.id}>
-            {listItem.name}
+          <li className='list-group-item' key={person.id}>
+            {person.name}
           </li>
         );
       })}
