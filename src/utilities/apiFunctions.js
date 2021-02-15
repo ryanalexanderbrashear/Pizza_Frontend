@@ -6,11 +6,11 @@ export const retrievePerson = async (name) => {
     if (response.status === 200 && response.data !== null) {
       return response.data;
     } else {
-      return [];
+      return null;
     }
   } catch (error) {
     console.log(error);
-    return [];
+    return null;
   }
 }
 
