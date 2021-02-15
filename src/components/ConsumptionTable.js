@@ -12,7 +12,7 @@ function ConsumptionTable(props) {
         </tr>
       </thead>
       <tbody>
-        {props.list.map((record) => {
+        {props.consumptionRecords.map((record) => {
           return (
             <tr key={record.id}>
               <td>{record.id}</td>

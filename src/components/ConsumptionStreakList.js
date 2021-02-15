@@ -3,12 +3,12 @@ import React from 'react';
 function ConsumptionStreakList(props) {
   return (
     <>
-      {props.list.map((listItem, index) => {
+      {props.consumptionStreaks.map((streak, index) => {
         return (
           <>
             {index + 1}
             <ul className='list-group list-group-flush' key={index}>
-              {listItem.map((date, index) => {
+              {streak.map((date, index) => {
                 return (
                   <li className='list-group-item' key={index}>
                     {date}

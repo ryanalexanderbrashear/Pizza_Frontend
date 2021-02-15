@@ -21,7 +21,7 @@ function ConsumptionStreaksCard() {
     <Card>
       <div className='card-body'>
         <h5 className='card-title'>{'Consumption Streaks'}</h5>
-        <ConsumptionStreakList list={consumptionStreaks} />
+        <ConsumptionStreakList consumptionStreaks={consumptionStreaks} />
       </div>
       <CardButtonContainer>
         <CardButton title={'Retrieve Consumption Streaks'} onClick={retrieveRecordStreaks} />
