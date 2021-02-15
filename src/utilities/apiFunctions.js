@@ -125,3 +125,17 @@ export const retrieveConsumptionStreaks = async () => {
     return [];
   }
 }
+
+export const retrieveMonthlyRecords = async () => {
+  try {
+    const response = await axios.get(`http://localhost:9292/api/v1/consumptionByMonth`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
