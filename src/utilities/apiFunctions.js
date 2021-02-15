@@ -1,5 +1,19 @@
 import axios from 'axios';
 
+export const retrievePerson = async (name) => {
+  try {
+    const response = await axios.get(`http://localhost:9292/api/v1/person?name=${name}`);
+    if (response.status === 200 && response.data !== null) {
+      return response.data;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
 export const retrievePeople = async () => {
   try {
     const response = await axios.get('http://localhost:9292/api/v1/people');
@@ -73,6 +87,20 @@ export const deletePizza = async (id) => {
 export const retrieveConsumption = async () => {
   try {
     const response = await axios.get(`http://localhost:9292/api/v1/consumption`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
+export const retrieveConsumptionByMeat = async (meatType) => {
+  try {
+    const response = await axios.get(`http://localhost:9292/api/v1/consumptionByMeat?meat_type=${meatType}`);
     if (response.status === 200) {
       return response.data;
     } else {
