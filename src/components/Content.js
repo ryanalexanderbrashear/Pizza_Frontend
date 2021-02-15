@@ -3,6 +3,7 @@ import PeopleListCard from './PeopleListCard';
 import PizzaListCard from './PizzaListCard';
 import ConsumptionListCard from './ConsumptionListCard';
 import ConsumptionStreaksCard from './ConsumptionStreaksCard';
+import MonthlyRecordCard from './MonthlyRecordCard';
 
 function Content() {
   return (
@@ -11,6 +12,7 @@ function Content() {
       <PizzaListCard />
       <ConsumptionListCard />
       <ConsumptionStreaksCard />
+      <MonthlyRecordCard />
     </div>
   );
 }
