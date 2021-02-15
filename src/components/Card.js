@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card(props) {
   return (
-    <div className='card h-100 my-4'>
+    <div className='card my-4 mx-auto col-4'>
       {props.children}
     </div>
   );
