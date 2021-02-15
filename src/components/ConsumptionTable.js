@@ -14,7 +14,7 @@ function ConsumptionTable(props) {
       <tbody>
         {props.list.map((record) => {
           return (
-            <tr>
+            <tr key={record.id}>
               <td>{record.id}</td>
               <td>{record.name}</td>
               <td>{record.meat_type}</td>
