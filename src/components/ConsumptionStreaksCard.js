@@ -4,15 +4,20 @@ import Card from "./Card";
 import CardButton from './CardButton';
 import CardButtonContainer from './CardButtonContainer';
 import ConsumptionStreakList from './ConsumptionStreakList';
+import ErrorText from './ErrorText';
 
 function ConsumptionStreaksCard() {
 
   const [consumptionStreaks, setConsumptionStreaks] = useState([]);
+  const [error, setError] = useState(null);
 
   const retrieveRecordStreaks = () => {
     retrieveConsumptionStreaks()
       .then((streaks) => {
-        console.log(streaks);
+        if (streaks.length === 0) {
+          setConsumptionStreaks([]);
+          setError('No streaks found.');
+        }
         setConsumptionStreaks(streaks);
       })
   }
@@ -21,6 +26,7 @@ function ConsumptionStreaksCard() {
     <Card>
       <div className='card-body'>
         <h5 className='card-title'>{'Consumption Streaks'}</h5>
+        <ErrorText error={error} />
         <ConsumptionStreakList consumptionStreaks={consumptionStreaks} />
       </div>
       <CardButtonContainer>
