@@ -35,7 +35,7 @@ function ConsumptionListCard() {
         <h5 className='card-title'>{'Pizza Consumption'}</h5>
         <ConsumptionTable list={consumptionRecords} />
         <div className='row mx-5'>
-          <input type='text' name='pizzaType' value={pizzaTypeInputText} onChange={handleChange} />
+          <input className='my-2' type='text' name='pizzaType' value={pizzaTypeInputText} onChange={handleChange} />
           <CardButton title={'Retrieve Consumption Records By Meat Type'} onClick={retrieveRecordsByMeat} />
         </div>
       </div>

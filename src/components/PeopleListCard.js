@@ -35,7 +35,7 @@ function PeopleListCard() {
         <h5 className='card-title'>{'People'}</h5>
         <PeopleList list={people} />
         <div className='row mx-5'>
-          <input type='text' name='personName' value={personInputText} onChange={handleChange} />
+          <input className='my-2' type='text' name='personName' value={personInputText} onChange={handleChange} />
           <CardButton title={'Retrieve Person By Name'} onClick={retrievePersonByName} />
         </div>
       </div>
