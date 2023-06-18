@@ -46,13 +46,13 @@ export const createPizza = async (meatType) => {
   try {
     const response = await axios.post(`http://localhost:9292/api/v1/pizza?meat_type=${meatType}`);
     if (response.status === 201) {
-      return true;
+      return response.data;
     } else {
-      return false;
+      return null;
     }
   } catch (error) {
     console.log(error);
-    return false;
+    return null;
   }
 }
 

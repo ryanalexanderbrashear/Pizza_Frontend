@@ -10,6 +10,7 @@ function PizzaListCard() {
 
   const [pizza, setPizza] = useState([]);
   const [error, setError] = useState(null);
+  const [newPizzaMeatType, setNewPizzaMeatType] = useState('');
 
   const retrievePizzaList = () => {
     setError(null);
@@ -26,13 +27,19 @@ function PizzaListCard() {
 
   const addNewPizza = () => {
     setError(null);
-    setPizza([]);
-    let meatType = prompt('What type of meat does this pizza have?');
+    let meatType = newPizzaMeatType;
+    setNewPizzaMeatType('');
 
     if (meatType && meatType !== '') {
       createPizza(meatType)
-        .then((success) => {
-          if (success) retrievePizzaList();
+        .then((newPizza) => {
+          if (newPizza) {
+            console.log(newPizza);
+            console.log(pizza);
+            let updatedPizzaList = pizza;
+            updatedPizzaList.push(newPizza);
+            setPizza([...updatedPizzaList]);
+          }
           else setError('Unable to create pizza. Please try again.');
         })
     }
@@ -60,12 +67,17 @@ function PizzaListCard() {
       })
   }
 
+  function handleChange(event) {
+    setNewPizzaMeatType(event.target.value);
+  }
+
   return (
     <Card>
       <div className='card-body'>
         <h5 className='card-title'>{'Pizza Types'}</h5>
         <ErrorText error={error} />
         <PizzaList pizzas={pizza} updateFunction={updatePizzaInfo} deleteFunction={deletePizzaByID} />
+        <input className='my-2' type='text' name='pizzaType' value={newPizzaMeatType} onChange={handleChange} />
       </div>
       <CardButtonContainer>
         <CardButton title={'Retrieve Pizza'} onClick={retrievePizzaList} />
